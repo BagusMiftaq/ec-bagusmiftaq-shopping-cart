@@ -45,8 +45,8 @@ export default function Cart(props) {
     }
 
     const ITEMS = [
-        {image:denim, color:"Blue", size:"M", price: 17.99, qty:count1, increase:increase1, decrease:decrease1},
-        {image:hoodie, color:"Red", size:"M", price: 35.99, qty:count2, increase:increase2, decrease:decrease2}
+        {name:"Blue denim shirt", image:denim, color:"Blue", size:"M", price: 17.99, qty:count1, increase:increase1, decrease:decrease1},
+        {name:"Red Hoodie", image:hoodie, color:"Red", size:"M", price: 35.99, qty:count2, increase:increase2, decrease:decrease2}
     ]
 
     return (props.value(totalPrice),
@@ -59,7 +59,7 @@ export default function Cart(props) {
                                 <img src={item.image}/>
                             </div>
                             <div className={'ml-8'}>
-                                <p className={'text-lg font-semibold mb-4'}>Blue denim shirt</p>
+                                <p className={'text-lg font-semibold mb-4'}>{item.name}</p>
                                 <div className={'text-sm flex text-slate-400 pr-10 mb-4'}>
                                     <p className={'mr-2'}>SHIRT</p>
                                     <p className={'mr-2'}>-</p>
